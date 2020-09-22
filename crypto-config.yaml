@@ -1,9 +1,11 @@
-# Copyright Business Blockchain www.blockchainempresarial.com. All Rights Reserved.
-# Autor: Ricardo Ruano, ricardo@blockchainempresarial.com
-# Date: 20-08-2020
-# SPDX-License-Identifier: Apache-2.0
-#
-OrdererOrgs:        # Organizacion ordenadora
+###############################################################################
+##
+##  Author: Javier Cervilla.
+##  Project: Marketplace en HyperLedger Fabric y Stellarç
+##  Date: 22/09/2020
+##
+###############################################################################
+OrdererOrgs:
     - Name: Orderer
       Domain: acme.com
       EnableNodeOUs: true
@@ -11,18 +13,9 @@ OrdererOrgs:        # Organizacion ordenadora
         - Hostname: orderer
           SANS:
             - localhost
-PeerOrgs:           # Organizacion de nodos peers
-    - Name: Org1
-      Domain: org1.acme.com
-      EnableNodeOUs: true
-      Template:
-        Count: 1    # Numero de nodos
-        SANS:
-          - localhost
-      Users:
-        Count: 1    # Numero de usuarios creados por defecto
-    - Name: Org2
-      Domain: org2.acme.com
+PeerOrgs:
+    - Name: Productor
+      Domain: productor.acme.com
       EnableNodeOUs: true
       Template:
         Count: 1
@@ -30,8 +23,17 @@ PeerOrgs:           # Organizacion de nodos peers
           - localhost
       Users:
         Count: 1
-    - Name: Org3
-      Domain: org3.acme.com
+    - Name: Consumidor
+      Domain: consumidor.acme.com
+      EnableNodeOUs: true
+      Template:
+        Count: 1
+        SANS:
+          - localhost
+      Users:
+        Count: 1
+    - Name: Mayorista
+      Domain: mayorista.acme.com
       EnableNodeOUs: true    
       Template:
         Count: 1
