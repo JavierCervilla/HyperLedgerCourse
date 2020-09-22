@@ -1,0 +1,1 @@
+El objetivo de este proyecto es, siguiendo el curso de hyperledger replicar una red en hyperledger y ampliar este, tratando de conectarlo con la red de stellar para realizar pagos. deseenme suerte :)
