@@ -1,9 +1,9 @@
 #!bin/sh
 
 # generamos las keys para las organizaciones y usuarios definidas en el crypto-config.yaml
-cryptogen generate  --config=./crypto-config.yaml --output="crypto-config"
+cryptogen generate  --config=./crypto-config.yaml --output="./crypto-config"
 
-# genramos el bloque genesis de la red blockchain
+# generamos el bloque genesis de la red blockchain
 
 configtxgen -profile ThreeOrgsOrdererGenesis -channelID system-channel -outputBlock ./channel-artifacts/genesis.block
 
